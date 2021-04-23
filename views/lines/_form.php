@@ -1,0 +1,51 @@
+<?php
+/**
+ * @copyright Copyright 2021 Undefined.team
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+use app\models\Operator;
+use yii\helpers\ArrayHelper;
+use yii\helpers\Html;
+use yii\widgets\ActiveForm;
+
+/* @var $this yii\web\View */
+/* @var $model app\models\Line */
+/* @var $simcard app\models\Simcard */
+/* @var $form yii\widgets\ActiveForm */
+/* @var $devices array */
+/* @var $lines array */
+/* @var $operators array */
+?>
+
+<div class="lines-form">
+
+    <?php $form = ActiveForm::begin(); ?>
+
+    <?= $form->field($model, 'title')->textInput(['maxlength' => 255]) ?>
+    <?php if($simcard): ?>
+        <?= $form->field($simcard, 'phone')->textInput(['maxlength' => 255]) ?>
+        <?= $form->field($simcard, 'operator_id')->dropDownList(ArrayHelper::map(Operator::find()->all(), "id", "name"), ["prompt" => "Выберите оператора"]) ?>
+    <?php else:?>
+        <?= Yii::t('goip', 'no_sim_card');?>
+    <?php endif;?>
+
+    <div class="form-group">
+        <?= Html::submitButton($model->isNewRecord ? Yii::t('goip', 'Create') : Yii::t('goip', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+    </div>
+
+    <?php ActiveForm::end(); ?>
+
+</div>

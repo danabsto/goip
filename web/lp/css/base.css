@@ -1,0 +1,104 @@
+/**
+ *
+ *
+ */
+/* -- SCREEN Media queries -- */
+/* -- COLORS -- */
+/* -- END COLORS -- */
+/* -- IMG PATH -- */
+/* -- END IMG PATH -- */
+/* -- BASE PROJECT FONT SETTINGS -- */
+/* -- END BASE PROJECT FONT SETTINGS -- */
+/* -- ICONS CODE TO PSEUDO-ELEMENTS -- */
+/* -- END ICONS CODE TO PSEUDO-ELEMENTS -- */
+/* -- ANIMATION STYLE -- */
+/* -- END ANIMATION STYLE -- */
+/* -- PRIMARY MIXIN -- */
+/*.transform(...) {
+	transform: @arguments translateZ(0);
+	-ms-transform: @arguments translateZ(0);
+	-webkit-transform: @arguments translateZ(0);
+}*/
+/* -- END PRIMARY MIXIN -- */
+/* -- SPECIFIC MIXIN -- */
+/*-- Light bg typography styles
+-----------------------------*/
+/*---------------------------*/
+/* -- END SPECIFIC MIXIN -- */
+@import url("//fast.fonts.net/t/1.css?apiType=css&projectid=eaf19cf5-485d-41eb-803b-07b10d75c4ce");
+/**
+ * Базовый шрифт
+ */
+@font-face {
+  font-family: "Avenir Next W10 Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/baseFont/677ce018-f09d-4e73-9713-bb2d8fd47896.eot?#iefix");
+  src: url("../fonts/baseFont/677ce018-f09d-4e73-9713-bb2d8fd47896.eot?#iefix") format("eot"), url("../fonts/baseFont/8b1d5802-f86f-4cc1-95a8-261eabda1d22.woff2") format("woff2"), url("../fonts/baseFont/30306912-4758-4c5f-8cd7-76a816c2e7aa.woff") format("woff"), url("../fonts/baseFont/00b0b7d9-bb66-4f91-aac2-82571a7a3b61.ttf") format("truetype"), url("../fonts/baseFont/19fe4c10-13f9-48bd-b902-710a507ee49e.svg#19fe4c10-13f9-48bd-b902-710a507ee49e") format("svg");
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../fonts/baseFont/9075a309-3c8e-4932-a2b8-0e34e3f30fd6.eot?#iefix");
+  src: url("../fonts/baseFont/9075a309-3c8e-4932-a2b8-0e34e3f30fd6.eot?#iefix") format("eot"), url("../fonts/baseFont/61f9ec25-f5d7-431f-9606-553aa690b3ae.woff2") format("woff2"), url("../fonts/baseFont/ab6d6afa-8f48-441b-a01d-a843b3a3aec1.woff") format("woff"), url("../fonts/baseFont/9c6c6099-637a-4e91-80c3-4dbe55854afe.ttf") format("truetype"), url("../fonts/baseFont/1557f6b0-463e-4939-9fbb-15bf52ac443c.svg#1557f6b0-463e-4939-9fbb-15bf52ac443c") format("svg");
+}
+@font-face {
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/baseFont/84f6130a-ee4e-4d03-918d-de92cfaa2da1.eot?#iefix");
+  src: url("../fonts/baseFont/84f6130a-ee4e-4d03-918d-de92cfaa2da1.eot?#iefix") format("eot"), url("../fonts/baseFont/1d9a4bae-080b-46bf-93b0-5930ffd10549.woff2") format("woff2"), url("../fonts/baseFont/e46a8eac-9aea-4ee0-a18d-ad17ee506926.woff") format("woff"), url("../fonts/baseFont/37f4ac36-6e15-4082-bc8e-669c9f04f58c.ttf") format("truetype"), url("../fonts/baseFont/10407b24-f58d-4c7b-bea4-f196f544e87d.svg#10407b24-f58d-4c7b-bea4-f196f544e87d") format("svg");
+}
+@font-face {
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/baseFont/AvenirNextCyr-Heavy.eot?#iefix");
+  src: url("../fonts/baseFont/AvenirNextCyr-Heavy.eot?#iefix") format("eot"), url("../fonts/baseFont/AvenirNextCyr-Heavy.woff") format("woff"), url("../fonts/baseFont/AvenirNextCyr-Heavy.ttf") format("truetype"), url("../fonts/baseFont/AvenirNextCyr-Heavy.svg") format("svg");
+}
+@font-face {
+  font-family: "Avenir Next Thin";
+  font-style: normal;
+  src: url("../fonts/baseFont/42c793cf-df5a-4e07-bf3e-37de54df02b6.eot?#iefix");
+  src: url("../fonts/baseFont/42c793cf-df5a-4e07-bf3e-37de54df02b6.eot?#iefix") format("eot"), url("../fonts/baseFont/64779e28-a3b8-4364-949c-771372a0a327.woff2") format("woff2"), url("../fonts/baseFont/c6c8e4be-17eb-4475-bbfc-bb485ffde766.woff") format("woff"), url("../fonts/baseFont/87a872d0-5af3-4231-a77c-37f41ec74662.ttf") format("truetype"), url("../fonts/baseFont/91464696-717b-4eaa-adbd-0dfc5e5fd782.svg") format("svg");
+}
+/**
+ * Шрифт с иконками
+ * Описание классов
+ * Путь @{ukitPath}
+ */
+@font-face {
+  font-family: 'ukit';
+  src: url('/fonts/ukit/ukit.eot?hkumea');
+  src: url('/fonts/ukit/ukit.eot?hkumea#iefix') format('embedded-opentype'), url('/fonts/ukit/ukit.ttf?hkumea') format('truetype'), url('/fonts/ukit/ukit.woff?hkumea') format('woff'), url('/fonts/ukit/ukit.svg?hkumea#ukit') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/**
+icons-group
+Группировка иконок по размерам каждой группе задается свой font-size для выравнивания по пиксельной сетке.
+Переедет в global
+*/
+.UL {
+  /*
+	TODO Сделать текст внизу. Не доделал, так как не знаю точное поведение высоты в панел диалоге. Как перенесу спецификацию доделаю
+	*/
+  /**
+ * TODO сделать для строки с текстом display: block в switcher opposite
+ * 
+ * 
+ * 
+ */
+}
+.UL .ul-button-bluePlus:hover:not(:active) {
+  background: #416076 !important;
+  color: #cfdbe1 !important;
+}
+@-moz-document url-prefix() {
+}
+@supports (-moz-osx-font-smoothing:auto) {
+}
+/* ---------- BLOG EDITING PANEL --------------*/
+/* ---------- DISQUS SECTION ---------- */
+/* ---------- DISQUS SECTION ---------- */
+/* ---------- BLOG DEFAULT DESIGN --------- */
+/* -------------- Для оверлея контролов поста ------------------- */

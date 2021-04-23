@@ -1,0 +1,74 @@
+{
+    "name": "goip/dashboard",
+    "description": "Удобный интерфейс для вашего GoIP",
+    "keywords": ["goip", "goipapi"],
+    "homepage": "",
+    "type": "project",
+    "license": "LGPL-2.0-only",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.3",
+        "yiisoft/yii2": "~2.0.5",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "dektrium/yii2-user": "^0.9.14",
+        "borales/yii2-phone-input": "^0.1.1",
+        "kartik-v/yii2-date-range": "^1.6",
+        "vyants/yii2-daemon": "*",
+        "kartik-v/yii2-widget-depdrop": "@dev",
+        "kartik-v/yii2-widget-select2": "@dev",
+        "ext-curl": "*",
+        "ext-libxml": "*",
+        "ext-dom": "*",
+        "ext-json": "*",
+      "ext-simplexml": "*",
+        "telegram-bot/api": "^2.3",
+        "yiisoft/yii2-swiftmailer": "^2.1",
+        "yiisoft/yii2-jui": "^2.0",
+        "light/yii2-swagger": "^3.0",
+        "symfony/dom-crawler": "2.8",
+        "symfony/css-selector": "2.8",
+        "wbraganca/yii2-dynamicform": "2.0.1"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.0.0",
+        "yiisoft/yii2-gii": "~2.0.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+        "codeception/base": "^2.2.3",
+        "codeception/verify": "~0.3.1",
+        "codeception/specify": "~0.4.3"
+    },
+    "config": {
+        "secure-http": false,
+        "process-timeout": 1800,
+        "gitlab-domains":["git.anyget.ru"],
+        "gitlab-oauth": {
+            "git.anyget.ru": "<key>"
+        },
+        "fxp-asset":{
+            "installer-paths": {
+                "npm-asset-library": "vendor/npm",
+                "bower-asset-library": "vendor/bower"
+            }
+        }
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "yii\\composer\\Installer::postCreateProject"
+        ]
+    },
+    "extra": {
+        "yii\\composer\\Installer::postCreateProject": {
+            "setPermission": [
+                {
+                    "runtime": "0777",
+                    "web/assets": "0777",
+                    "yii": "0755"
+                }
+            ],
+            "generateCookieValidationKey": [
+                "config/web.php"
+            ]
+        }
+    }
+}
